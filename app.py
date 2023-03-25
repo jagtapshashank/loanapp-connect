@@ -25,7 +25,7 @@ def predict():
 
     input_query = np.array([[income,ownership,emp,l_grade,l_amount,int_rate,per_income,defaulter]], dtype=object)
 
-    result = model.predict(input_query)
+    result = model.predict(input_query)[0]
 
     return jsonify({'Defaulter':str(result)})
 
